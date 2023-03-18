@@ -14,10 +14,12 @@ spec:
 
   source:
     repoURL: 'https://argoproj.github.io/argo-helm'
-    targetRevision: 5.2.1
+    targetRevision: 5.27.1
     chart: argo-cd
     helm:
       values: |
+        crds:
+          install: true
         server:
           extraArgs:
             - "--disable-auth"
@@ -31,8 +33,5 @@ spec:
         dex:
           enabled: "false"
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
     syncOptions:
       - CreateNamespace=true
