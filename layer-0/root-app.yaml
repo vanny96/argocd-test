@@ -11,6 +11,6 @@ spec:
   project: root-app
 
   source:
-    repoURL: path-to-repo
+    repoURL: https://github.com/vanny96/argocd-test
     path: layer-1
     targetRevision: HEAD
