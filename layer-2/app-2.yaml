@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nested-2
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: nested-app
+    server: https://kubernetes.default.svc
+
+  project: layer-2
+
+  source:
+    repoURL: https://aureliengasser.github.io/charts
+    chart: http-folder
+    targetRevision: 2.0.0
+    helm:
+      releaseName: http-folder

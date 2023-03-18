@@ -1,0 +1,4 @@
+resources:
+  - ./app-1.yaml
+  - ./app-2.yaml
+  - ./namespace.yaml
