@@ -2,4 +2,3 @@ resources:
   - ./app-1.yaml
   - ./clusterrole.yaml
   - ./namespace.yaml
-  - ./recursive-app.yaml
